@@ -1,0 +1,122 @@
+<%= form_with(model: charity, local: true) do |form| %>
+  <% if charity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(charity.errors.count, "error") %> prohibited this charity from being saved:</h2>
+
+      <ul>
+      <% charity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regno %>
+    <%= form.text_field :regno, id: :charity_regno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subno %>
+    <%= form.number_field :subno, id: :charity_subno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :charity_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :orgtype %>
+    <%= form.text_field :orgtype, id: :charity_orgtype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gd %>
+    <%= form.text_area :gd, id: :charity_gd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aob %>
+    <%= form.text_field :aob, id: :charity_aob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aob_defined %>
+    <%= form.text_field :aob_defined, id: :charity_aob_defined %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nhs %>
+    <%= form.text_field :nhs, id: :charity_nhs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ha_no %>
+    <%= form.text_field :ha_no, id: :charity_ha_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :corr %>
+    <%= form.text_field :corr, id: :charity_corr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :add1 %>
+    <%= form.text_field :add1, id: :charity_add1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :add2 %>
+    <%= form.text_field :add2, id: :charity_add2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :add3 %>
+    <%= form.text_field :add3, id: :charity_add3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :add4 %>
+    <%= form.text_field :add4, id: :charity_add4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :add5 %>
+    <%= form.text_field :add5, id: :charity_add5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postcode %>
+    <%= form.text_field :postcode, id: :charity_postcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :charity_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fax %>
+    <%= form.text_field :fax, id: :charity_fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lon %>
+    <%= form.text_field :lon, id: :charity_lon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat, id: :charity_lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :update_at %>
+    <%= form.datetime_select :update_at, id: :charity_update_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

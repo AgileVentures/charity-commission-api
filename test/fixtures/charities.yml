@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regno: MyString
+  subno: 1
+  name: MyString
+  orgtype: MyString
+  gd: MyText
+  aob: MyString
+  aob_defined: MyString
+  nhs: MyString
+  ha_no: MyString
+  corr: MyString
+  add1: MyString
+  add2: MyString
+  add3: MyString
+  add4: MyString
+  add5: MyString
+  postcode: MyString
+  phone: MyString
+  fax: MyString
+  lon: 1.5
+  lat: 1.5
+  update_at: 2017-11-20 18:03:08
+
+two:
+  regno: MyString
+  subno: 1
+  name: MyString
+  orgtype: MyString
+  gd: MyText
+  aob: MyString
+  aob_defined: MyString
+  nhs: MyString
+  ha_no: MyString
+  corr: MyString
+  add1: MyString
+  add2: MyString
+  add3: MyString
+  add4: MyString
+  add5: MyString
+  postcode: MyString
+  phone: MyString
+  fax: MyString
+  lon: 1.5
+  lat: 1.5
+  update_at: 2017-11-20 18:03:08
