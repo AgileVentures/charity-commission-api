@@ -1,0 +1,67 @@
+<%= form_with(model: main_charity, local: true) do |form| %>
+  <% if main_charity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(main_charity.errors.count, "error") %> prohibited this main_charity from being saved:</h2>
+
+      <ul>
+      <% main_charity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regno %>
+    <%= form.text_field :regno, id: :main_charity_regno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coyno %>
+    <%= form.text_field :coyno, id: :main_charity_coyno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trustees %>
+    <%= form.text_field :trustees, id: :main_charity_trustees %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fyend %>
+    <%= form.text_field :fyend, id: :main_charity_fyend %>
+  </div>
+
+  <div class="field">
+    <%= form.label :welsh %>
+    <%= form.text_field :welsh, id: :main_charity_welsh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incomedate %>
+    <%= form.text_field :incomedate, id: :main_charity_incomedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :income %>
+    <%= form.number_field :income, id: :main_charity_income %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grouptype %>
+    <%= form.text_field :grouptype, id: :main_charity_grouptype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :main_charity_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :web %>
+    <%= form.text_field :web, id: :main_charity_web %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

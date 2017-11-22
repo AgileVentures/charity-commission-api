@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regno: MyString
+  coyno: MyString
+  trustees: MyString
+  fyend: MyString
+  welsh: MyString
+  incomedate: MyString
+  income: 1
+  grouptype: MyString
+  email: MyString
+  web: MyString
+
+two:
+  regno: MyString
+  coyno: MyString
+  trustees: MyString
+  fyend: MyString
+  welsh: MyString
+  incomedate: MyString
+  income: 1
+  grouptype: MyString
+  email: MyString
+  web: MyString

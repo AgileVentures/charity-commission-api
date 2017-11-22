@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Main Charities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regno</th>
+      <th>Coyno</th>
+      <th>Trustees</th>
+      <th>Fyend</th>
+      <th>Welsh</th>
+      <th>Incomedate</th>
+      <th>Income</th>
+      <th>Grouptype</th>
+      <th>Email</th>
+      <th>Web</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @main_charities.each do |main_charity| %>
+      <tr>
+        <td><%= main_charity.regno %></td>
+        <td><%= main_charity.coyno %></td>
+        <td><%= main_charity.trustees %></td>
+        <td><%= main_charity.fyend %></td>
+        <td><%= main_charity.welsh %></td>
+        <td><%= main_charity.incomedate %></td>
+        <td><%= main_charity.income %></td>
+        <td><%= main_charity.grouptype %></td>
+        <td><%= main_charity.email %></td>
+        <td><%= main_charity.web %></td>
+        <td><%= link_to 'Show', main_charity %></td>
+        <td><%= link_to 'Edit', edit_main_charity_path(main_charity) %></td>
+        <td><%= link_to 'Destroy', main_charity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Main Charity', new_main_charity_path %>

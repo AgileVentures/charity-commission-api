@@ -37,4 +37,19 @@ ActiveRecord::Schema.define(version: 0) do
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "main_charities", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
+    t.string "coyno", collation: "latin1_swedish_ci"
+    t.string "trustees", limit: 1, collation: "latin1_swedish_ci"
+    t.string "fyend", limit: 4, collation: "latin1_swedish_ci"
+    t.string "welsh", limit: 1, collation: "latin1_swedish_ci"
+    t.string "incomedate"
+    t.integer "income"
+    t.string "grouptype", limit: 4, collation: "latin1_swedish_ci"
+    t.string "email", collation: "latin1_swedish_ci"
+    t.string "web", collation: "latin1_swedish_ci"
+    t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
 end
