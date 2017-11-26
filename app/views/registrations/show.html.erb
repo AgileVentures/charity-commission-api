@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regno:</strong>
+  <%= @registration.regno %>
+</p>
+
+<p>
+  <strong>Subno:</strong>
+  <%= @registration.subno %>
+</p>
+
+<p>
+  <strong>Regdate:</strong>
+  <%= @registration.regdate %>
+</p>
+
+<p>
+  <strong>Remdate:</strong>
+  <%= @registration.remdate %>
+</p>
+
+<p>
+  <strong>Remcode:</strong>
+  <%= @registration.remcode %>
+</p>
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', registrations_path %>

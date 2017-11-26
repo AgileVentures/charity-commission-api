@@ -52,4 +52,14 @@ ActiveRecord::Schema.define(version: 0) do
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "registrations", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
+    t.integer "subno", default: 0, null: false
+    t.datetime "regdate"
+    t.datetime "remdate"
+    t.string "remcode", limit: 3, collation: "latin1_swedish_ci"
+    t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
 end

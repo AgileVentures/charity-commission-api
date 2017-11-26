@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regno: MyString
+  subno: 1
+  regdate: 2017-11-26 13:52:07
+  remdate: 2017-11-26 13:52:07
+  remcode: MyString
+
+two:
+  regno: MyString
+  subno: 1
+  regdate: 2017-11-26 13:52:07
+  remdate: 2017-11-26 13:52:07
+  remcode: MyString
