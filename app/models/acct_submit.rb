@@ -1,0 +1,2 @@
+class AcctSubmit < ApplicationRecord
+end

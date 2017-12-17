@@ -1,0 +1,37 @@
+<%= form_with(model: acct_submit, local: true) do |form| %>
+  <% if acct_submit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(acct_submit.errors.count, "error") %> prohibited this acct_submit from being saved:</h2>
+
+      <ul>
+      <% acct_submit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regno %>
+    <%= form.text_field :regno, id: :acct_submit_regno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :submit_date %>
+    <%= form.datetime_select :submit_date, id: :acct_submit_submit_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arno %>
+    <%= form.text_field :arno, id: :acct_submit_arno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fyend %>
+    <%= form.text_field :fyend, id: :acct_submit_fyend %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

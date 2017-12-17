@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :acct_submits
   resources :registrations
   resources :main_charities
   resources :charities

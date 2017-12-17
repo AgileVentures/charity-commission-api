@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regno: MyString
+  submit_date: 2017-12-17 11:46:08
+  arno: MyString
+  fyend: MyString
+
+two:
+  regno: MyString
+  submit_date: 2017-12-17 11:46:08
+  arno: MyString
+  fyend: MyString

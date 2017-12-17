@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regno:</strong>
+  <%= @acct_submit.regno %>
+</p>
+
+<p>
+  <strong>Submit date:</strong>
+  <%= @acct_submit.submit_date %>
+</p>
+
+<p>
+  <strong>Arno:</strong>
+  <%= @acct_submit.arno %>
+</p>
+
+<p>
+  <strong>Fyend:</strong>
+  <%= @acct_submit.fyend %>
+</p>
+
+<%= link_to 'Edit', edit_acct_submit_path(@acct_submit) %> |
+<%= link_to 'Back', acct_submits_path %>

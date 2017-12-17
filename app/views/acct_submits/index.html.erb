@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Acct Submits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regno</th>
+      <th>Submit date</th>
+      <th>Arno</th>
+      <th>Fyend</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acct_submits.each do |acct_submit| %>
+      <tr>
+        <td><%= acct_submit.regno %></td>
+        <td><%= acct_submit.submit_date %></td>
+        <td><%= acct_submit.arno %></td>
+        <td><%= acct_submit.fyend %></td>
+        <td><%= link_to 'Show', acct_submit %></td>
+        <td><%= link_to 'Edit', edit_acct_submit_path(acct_submit) %></td>
+        <td><%= link_to 'Destroy', acct_submit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Acct Submit', new_acct_submit_path %>
