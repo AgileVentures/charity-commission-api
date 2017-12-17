@@ -1,0 +1,242 @@
+<%= form_with(model: charity_partb, local: true) do |form| %>
+  <% if charity_partb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(charity_partb.errors.count, "error") %> prohibited this charity_partb from being saved:</h2>
+
+      <ul>
+      <% charity_partb.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regno %>
+    <%= form.text_field :regno, id: :charity_partb_regno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artype %>
+    <%= form.text_field :artype, id: :charity_partb_artype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fystart %>
+    <%= form.datetime_select :fystart, id: :charity_partb_fystart %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fyend %>
+    <%= form.datetime_select :fyend, id: :charity_partb_fyend %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_leg %>
+    <%= form.text_field :inc_leg, id: :charity_partb_inc_leg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_end %>
+    <%= form.text_field :inc_end, id: :charity_partb_inc_end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_vol %>
+    <%= form.text_field :inc_vol, id: :charity_partb_inc_vol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_fr %>
+    <%= form.text_field :inc_fr, id: :charity_partb_inc_fr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_char %>
+    <%= form.text_field :inc_char, id: :charity_partb_inc_char %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_invest %>
+    <%= form.text_field :inc_invest, id: :charity_partb_inc_invest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_other %>
+    <%= form.text_field :inc_other, id: :charity_partb_inc_other %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_total %>
+    <%= form.text_field :inc_total, id: :charity_partb_inc_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :invest_gain %>
+    <%= form.text_field :invest_gain, id: :charity_partb_invest_gain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asset_gain %>
+    <%= form.text_field :asset_gain, id: :charity_partb_asset_gain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pension_gain %>
+    <%= form.text_field :pension_gain, id: :charity_partb_pension_gain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_vol %>
+    <%= form.text_field :exp_vol, id: :charity_partb_exp_vol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_trade %>
+    <%= form.text_field :exp_trade, id: :charity_partb_exp_trade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_invest %>
+    <%= form.text_field :exp_invest, id: :charity_partb_exp_invest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_grant %>
+    <%= form.text_field :exp_grant, id: :charity_partb_exp_grant %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_charble %>
+    <%= form.text_field :exp_charble, id: :charity_partb_exp_charble %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_gov %>
+    <%= form.text_field :exp_gov, id: :charity_partb_exp_gov %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_other %>
+    <%= form.text_field :exp_other, id: :charity_partb_exp_other %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_total %>
+    <%= form.text_field :exp_total, id: :charity_partb_exp_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_support %>
+    <%= form.text_field :exp_support, id: :charity_partb_exp_support %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_dep %>
+    <%= form.text_field :exp_dep, id: :charity_partb_exp_dep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reserves %>
+    <%= form.text_field :reserves, id: :charity_partb_reserves %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asset_open %>
+    <%= form.text_field :asset_open, id: :charity_partb_asset_open %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asset_close %>
+    <%= form.text_field :asset_close, id: :charity_partb_asset_close %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fixed_assets %>
+    <%= form.text_field :fixed_assets, id: :charity_partb_fixed_assets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :open_assets %>
+    <%= form.text_field :open_assets, id: :charity_partb_open_assets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :invest_assets %>
+    <%= form.text_field :invest_assets, id: :charity_partb_invest_assets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cash_assets %>
+    <%= form.text_field :cash_assets, id: :charity_partb_cash_assets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_assets %>
+    <%= form.text_field :current_assets, id: :charity_partb_current_assets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :credit_1 %>
+    <%= form.text_field :credit_1, id: :charity_partb_credit_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :credit_long %>
+    <%= form.text_field :credit_long, id: :charity_partb_credit_long %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pension_assets %>
+    <%= form.text_field :pension_assets, id: :charity_partb_pension_assets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_assets %>
+    <%= form.text_field :total_assets, id: :charity_partb_total_assets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funds_end %>
+    <%= form.text_field :funds_end, id: :charity_partb_funds_end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funds_restrict %>
+    <%= form.text_field :funds_restrict, id: :charity_partb_funds_restrict %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funds_unrestrict %>
+    <%= form.text_field :funds_unrestrict, id: :charity_partb_funds_unrestrict %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funds_total %>
+    <%= form.text_field :funds_total, id: :charity_partb_funds_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employees %>
+    <%= form.number_field :employees, id: :charity_partb_employees %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volunteers %>
+    <%= form.number_field :volunteers, id: :charity_partb_volunteers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cons_acc %>
+    <%= form.text_field :cons_acc, id: :charity_partb_cons_acc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :charity_acc %>
+    <%= form.text_field :charity_acc, id: :charity_partb_charity_acc %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

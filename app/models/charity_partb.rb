@@ -1,0 +1,2 @@
+class CharityPartb < ApplicationRecord
+end

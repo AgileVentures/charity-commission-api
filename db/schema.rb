@@ -108,6 +108,56 @@ ActiveRecord::Schema.define(version: 0) do
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "charity_partbs", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
+    t.string "artype", limit: 4, default: "", null: false, collation: "latin1_swedish_ci"
+    t.datetime "fystart"
+    t.datetime "fyend"
+    t.bigint "inc_leg"
+    t.bigint "inc_end"
+    t.bigint "inc_vol"
+    t.bigint "inc_fr"
+    t.bigint "inc_char"
+    t.bigint "inc_invest"
+    t.bigint "inc_other"
+    t.bigint "inc_total"
+    t.bigint "invest_gain"
+    t.bigint "asset_gain"
+    t.bigint "pension_gain"
+    t.bigint "exp_vol"
+    t.bigint "exp_trade"
+    t.bigint "exp_invest"
+    t.bigint "exp_grant"
+    t.bigint "exp_charble"
+    t.bigint "exp_gov"
+    t.bigint "exp_other"
+    t.bigint "exp_total"
+    t.bigint "exp_support"
+    t.bigint "exp_dep"
+    t.bigint "reserves"
+    t.bigint "asset_open"
+    t.bigint "asset_close"
+    t.bigint "fixed_assets"
+    t.bigint "open_assets"
+    t.bigint "invest_assets"
+    t.bigint "cash_assets"
+    t.bigint "current_assets"
+    t.bigint "credit_1"
+    t.bigint "credit_long"
+    t.bigint "pension_assets"
+    t.bigint "total_assets"
+    t.bigint "funds_end"
+    t.bigint "funds_restrict"
+    t.bigint "funds_unrestrict"
+    t.bigint "funds_total"
+    t.integer "employees"
+    t.integer "volunteers"
+    t.string "cons_acc", collation: "latin1_swedish_ci"
+    t.string "charity_acc", collation: "latin1_swedish_ci"
+    t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
   create_table "financials", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "regno", limit: 14, default: "0", null: false
     t.datetime "fystart"

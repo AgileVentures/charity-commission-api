@@ -1,0 +1,115 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Charity Partbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regno</th>
+      <th>Artype</th>
+      <th>Fystart</th>
+      <th>Fyend</th>
+      <th>Inc leg</th>
+      <th>Inc end</th>
+      <th>Inc vol</th>
+      <th>Inc fr</th>
+      <th>Inc char</th>
+      <th>Inc invest</th>
+      <th>Inc other</th>
+      <th>Inc total</th>
+      <th>Invest gain</th>
+      <th>Asset gain</th>
+      <th>Pension gain</th>
+      <th>Exp vol</th>
+      <th>Exp trade</th>
+      <th>Exp invest</th>
+      <th>Exp grant</th>
+      <th>Exp charble</th>
+      <th>Exp gov</th>
+      <th>Exp other</th>
+      <th>Exp total</th>
+      <th>Exp support</th>
+      <th>Exp dep</th>
+      <th>Reserves</th>
+      <th>Asset open</th>
+      <th>Asset close</th>
+      <th>Fixed assets</th>
+      <th>Open assets</th>
+      <th>Invest assets</th>
+      <th>Cash assets</th>
+      <th>Current assets</th>
+      <th>Credit 1</th>
+      <th>Credit long</th>
+      <th>Pension assets</th>
+      <th>Total assets</th>
+      <th>Funds end</th>
+      <th>Funds restrict</th>
+      <th>Funds unrestrict</th>
+      <th>Funds total</th>
+      <th>Employees</th>
+      <th>Volunteers</th>
+      <th>Cons acc</th>
+      <th>Charity acc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @charity_partbs.each do |charity_partb| %>
+      <tr>
+        <td><%= charity_partb.regno %></td>
+        <td><%= charity_partb.artype %></td>
+        <td><%= charity_partb.fystart %></td>
+        <td><%= charity_partb.fyend %></td>
+        <td><%= charity_partb.inc_leg %></td>
+        <td><%= charity_partb.inc_end %></td>
+        <td><%= charity_partb.inc_vol %></td>
+        <td><%= charity_partb.inc_fr %></td>
+        <td><%= charity_partb.inc_char %></td>
+        <td><%= charity_partb.inc_invest %></td>
+        <td><%= charity_partb.inc_other %></td>
+        <td><%= charity_partb.inc_total %></td>
+        <td><%= charity_partb.invest_gain %></td>
+        <td><%= charity_partb.asset_gain %></td>
+        <td><%= charity_partb.pension_gain %></td>
+        <td><%= charity_partb.exp_vol %></td>
+        <td><%= charity_partb.exp_trade %></td>
+        <td><%= charity_partb.exp_invest %></td>
+        <td><%= charity_partb.exp_grant %></td>
+        <td><%= charity_partb.exp_charble %></td>
+        <td><%= charity_partb.exp_gov %></td>
+        <td><%= charity_partb.exp_other %></td>
+        <td><%= charity_partb.exp_total %></td>
+        <td><%= charity_partb.exp_support %></td>
+        <td><%= charity_partb.exp_dep %></td>
+        <td><%= charity_partb.reserves %></td>
+        <td><%= charity_partb.asset_open %></td>
+        <td><%= charity_partb.asset_close %></td>
+        <td><%= charity_partb.fixed_assets %></td>
+        <td><%= charity_partb.open_assets %></td>
+        <td><%= charity_partb.invest_assets %></td>
+        <td><%= charity_partb.cash_assets %></td>
+        <td><%= charity_partb.current_assets %></td>
+        <td><%= charity_partb.credit_1 %></td>
+        <td><%= charity_partb.credit_long %></td>
+        <td><%= charity_partb.pension_assets %></td>
+        <td><%= charity_partb.total_assets %></td>
+        <td><%= charity_partb.funds_end %></td>
+        <td><%= charity_partb.funds_restrict %></td>
+        <td><%= charity_partb.funds_unrestrict %></td>
+        <td><%= charity_partb.funds_total %></td>
+        <td><%= charity_partb.employees %></td>
+        <td><%= charity_partb.volunteers %></td>
+        <td><%= charity_partb.cons_acc %></td>
+        <td><%= charity_partb.charity_acc %></td>
+        <td><%= link_to 'Show', charity_partb %></td>
+        <td><%= link_to 'Edit', edit_charity_partb_path(charity_partb) %></td>
+        <td><%= link_to 'Destroy', charity_partb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Charity Partb', new_charity_partb_path %>
