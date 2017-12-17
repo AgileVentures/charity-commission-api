@@ -1,0 +1,2 @@
+class CharityRemoveRef < ApplicationRecord
+end

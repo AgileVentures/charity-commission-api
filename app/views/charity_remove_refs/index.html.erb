@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Charity Remove Refs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @charity_remove_refs.each do |charity_remove_ref| %>
+      <tr>
+        <td><%= charity_remove_ref.code %></td>
+        <td><%= charity_remove_ref.text %></td>
+        <td><%= link_to 'Show', charity_remove_ref %></td>
+        <td><%= link_to 'Edit', edit_charity_remove_ref_path(charity_remove_ref) %></td>
+        <td><%= link_to 'Destroy', charity_remove_ref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Charity Remove Ref', new_charity_remove_ref_path %>

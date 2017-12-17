@@ -158,6 +158,13 @@ ActiveRecord::Schema.define(version: 0) do
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "charity_remove_refs", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "code", limit: 3, default: "", null: false, collation: "latin1_swedish_ci"
+    t.string "text", limit: 25, collation: "latin1_swedish_ci"
+    t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
   create_table "financials", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "regno", limit: 14, default: "0", null: false
     t.datetime "fystart"

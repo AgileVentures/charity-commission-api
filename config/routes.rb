@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :charity_remove_refs
   resources :charity_partbs
   resources :charity_objects
   resources :charity_names

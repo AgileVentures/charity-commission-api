@@ -1,0 +1,27 @@
+<%= form_with(model: charity_remove_ref, local: true) do |form| %>
+  <% if charity_remove_ref.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(charity_remove_ref.errors.count, "error") %> prohibited this charity_remove_ref from being saved:</h2>
+
+      <ul>
+      <% charity_remove_ref.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code, id: :charity_remove_ref_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_field :text, id: :charity_remove_ref_text %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
