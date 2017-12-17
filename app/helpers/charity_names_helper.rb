@@ -1,0 +1,2 @@
+module CharityNamesHelper
+end
