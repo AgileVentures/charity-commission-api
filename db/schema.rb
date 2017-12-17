@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 0) do
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "aoo_refs", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "aootype", limit: 1, default: "", null: false
+    t.integer "aookey", default: 0, null: false
+    t.string "aooname", limit: 50, null: false
+    t.string "aoosort", limit: 50, null: false
+    t.string "welsh", limit: 1, null: false
+    t.string "master", limit: 2
+    t.string "code", limit: 20
+    t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
   create_table "charities", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
     t.integer "subno", default: 0, null: false

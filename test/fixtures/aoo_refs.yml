@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aootype: MyString
+  aookey: 1
+  aooname: MyString
+  aoosort: MyString
+  welsh: MyString
+  master: MyString
+  code: MyString
+
+two:
+  aootype: MyString
+  aookey: 1
+  aooname: MyString
+  aoosort: MyString
+  welsh: MyString
+  master: MyString
+  code: MyString

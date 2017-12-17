@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aoo Refs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aootype</th>
+      <th>Aookey</th>
+      <th>Aooname</th>
+      <th>Aoosort</th>
+      <th>Welsh</th>
+      <th>Master</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aoo_refs.each do |aoo_ref| %>
+      <tr>
+        <td><%= aoo_ref.aootype %></td>
+        <td><%= aoo_ref.aookey %></td>
+        <td><%= aoo_ref.aooname %></td>
+        <td><%= aoo_ref.aoosort %></td>
+        <td><%= aoo_ref.welsh %></td>
+        <td><%= aoo_ref.master %></td>
+        <td><%= aoo_ref.code %></td>
+        <td><%= link_to 'Show', aoo_ref %></td>
+        <td><%= link_to 'Edit', edit_aoo_ref_path(aoo_ref) %></td>
+        <td><%= link_to 'Destroy', aoo_ref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aoo Ref', new_aoo_ref_path %>

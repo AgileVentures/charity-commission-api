@@ -1,0 +1,52 @@
+<%= form_with(model: aoo_ref, local: true) do |form| %>
+  <% if aoo_ref.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aoo_ref.errors.count, "error") %> prohibited this aoo_ref from being saved:</h2>
+
+      <ul>
+      <% aoo_ref.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :aootype %>
+    <%= form.text_field :aootype, id: :aoo_ref_aootype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aookey %>
+    <%= form.number_field :aookey, id: :aoo_ref_aookey %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aooname %>
+    <%= form.text_field :aooname, id: :aoo_ref_aooname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aoosort %>
+    <%= form.text_field :aoosort, id: :aoo_ref_aoosort %>
+  </div>
+
+  <div class="field">
+    <%= form.label :welsh %>
+    <%= form.text_field :welsh, id: :aoo_ref_welsh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :master %>
+    <%= form.text_field :master, id: :aoo_ref_master %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code, id: :aoo_ref_code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
