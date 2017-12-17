@@ -1,0 +1,42 @@
+<%= form_with(model: charity_aoo, local: true) do |form| %>
+  <% if charity_aoo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(charity_aoo.errors.count, "error") %> prohibited this charity_aoo from being saved:</h2>
+
+      <ul>
+      <% charity_aoo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regno %>
+    <%= form.text_field :regno, id: :charity_aoo_regno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aootype %>
+    <%= form.text_field :aootype, id: :charity_aoo_aootype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aookey %>
+    <%= form.number_field :aookey, id: :charity_aoo_aookey %>
+  </div>
+
+  <div class="field">
+    <%= form.label :welsh %>
+    <%= form.text_field :welsh, id: :charity_aoo_welsh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :master %>
+    <%= form.number_field :master, id: :charity_aoo_master %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

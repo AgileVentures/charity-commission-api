@@ -66,6 +66,16 @@ ActiveRecord::Schema.define(version: 0) do
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "charity_aoos", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
+    t.string "aootype", limit: 1, default: "", null: false, collation: "latin1_swedish_ci"
+    t.integer "aookey", default: 0, null: false
+    t.string "welsh", limit: 1, collation: "latin1_swedish_ci"
+    t.integer "master"
+    t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
   create_table "main_charities", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
     t.string "coyno", collation: "latin1_swedish_ci"

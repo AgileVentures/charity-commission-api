@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Charity Aoos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regno</th>
+      <th>Aootype</th>
+      <th>Aookey</th>
+      <th>Welsh</th>
+      <th>Master</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @charity_aoos.each do |charity_aoo| %>
+      <tr>
+        <td><%= charity_aoo.regno %></td>
+        <td><%= charity_aoo.aootype %></td>
+        <td><%= charity_aoo.aookey %></td>
+        <td><%= charity_aoo.welsh %></td>
+        <td><%= charity_aoo.master %></td>
+        <td><%= link_to 'Show', charity_aoo %></td>
+        <td><%= link_to 'Edit', edit_charity_aoo_path(charity_aoo) %></td>
+        <td><%= link_to 'Destroy', charity_aoo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Charity Aoo', new_charity_aoo_path %>
