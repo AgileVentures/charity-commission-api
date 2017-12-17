@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Charity Objects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regno</th>
+      <th>Subno</th>
+      <th>Seqno</th>
+      <th>Object</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @charity_objects.each do |charity_object| %>
+      <tr>
+        <td><%= charity_object.regno %></td>
+        <td><%= charity_object.subno %></td>
+        <td><%= charity_object.seqno %></td>
+        <td><%= charity_object.object %></td>
+        <td><%= link_to 'Show', charity_object %></td>
+        <td><%= link_to 'Edit', edit_charity_object_path(charity_object) %></td>
+        <td><%= link_to 'Destroy', charity_object, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Charity Object', new_charity_object_path %>

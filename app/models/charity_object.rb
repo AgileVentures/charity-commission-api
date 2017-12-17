@@ -1,0 +1,2 @@
+class CharityObject < ApplicationRecord
+end

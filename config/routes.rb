@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :charity_objects
   resources :charity_names
   resources :financials
   resources :charity_class_refs

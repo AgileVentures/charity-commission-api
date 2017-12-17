@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regno: MyString
+  subno: 1
+  seqno: MyString
+  object: MyString
+
+two:
+  regno: MyString
+  subno: 1
+  seqno: MyString
+  object: MyString
