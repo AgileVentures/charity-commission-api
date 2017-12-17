@@ -1,0 +1,2 @@
+module CharityClassRefsHelper
+end
