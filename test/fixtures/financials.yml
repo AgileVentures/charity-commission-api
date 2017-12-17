@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regno: MyString
+  fystart: 2017-12-17 13:49:43
+  fyend: 2017-12-17 13:49:43
+  income: 1
+  expend: 1
+
+two:
+  regno: MyString
+  fystart: 2017-12-17 13:49:43
+  fyend: 2017-12-17 13:49:43
+  income: 1
+  expend: 1

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regno:</strong>
+  <%= @financial.regno %>
+</p>
+
+<p>
+  <strong>Fystart:</strong>
+  <%= @financial.fystart %>
+</p>
+
+<p>
+  <strong>Fyend:</strong>
+  <%= @financial.fyend %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @financial.income %>
+</p>
+
+<p>
+  <strong>Expend:</strong>
+  <%= @financial.expend %>
+</p>
+
+<%= link_to 'Edit', edit_financial_path(@financial) %> |
+<%= link_to 'Back', financials_path %>
