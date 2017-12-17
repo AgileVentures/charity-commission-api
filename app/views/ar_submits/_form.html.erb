@@ -1,0 +1,32 @@
+<%= form_with(model: ar_submit, local: true) do |form| %>
+  <% if ar_submit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ar_submit.errors.count, "error") %> prohibited this ar_submit from being saved:</h2>
+
+      <ul>
+      <% ar_submit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regno %>
+    <%= form.text_field :regno, id: :ar_submit_regno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arno %>
+    <%= form.text_field :arno, id: :ar_submit_arno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :submit_date %>
+    <%= form.datetime_select :submit_date, id: :ar_submit_submit_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

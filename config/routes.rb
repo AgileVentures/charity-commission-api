@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ar_submits
   resources :aoo_refs
   resources :acct_submits
   resources :registrations

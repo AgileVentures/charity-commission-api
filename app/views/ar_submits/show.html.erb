@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regno:</strong>
+  <%= @ar_submit.regno %>
+</p>
+
+<p>
+  <strong>Arno:</strong>
+  <%= @ar_submit.arno %>
+</p>
+
+<p>
+  <strong>Submit date:</strong>
+  <%= @ar_submit.submit_date %>
+</p>
+
+<%= link_to 'Edit', edit_ar_submit_path(@ar_submit) %> |
+<%= link_to 'Back', ar_submits_path %>

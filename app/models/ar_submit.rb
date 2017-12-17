@@ -1,0 +1,2 @@
+class ArSubmit < ApplicationRecord
+end

@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 0) do
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
+  create_table "ar_submits", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
+    t.string "arno", limit: 4, default: "", null: false, collation: "latin1_swedish_ci"
+    t.datetime "submit_date"
+    t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
   create_table "charities", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
     t.integer "subno", default: 0, null: false
