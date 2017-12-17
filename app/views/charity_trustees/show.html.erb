@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regno:</strong>
+  <%= @charity_trustee.regno %>
+</p>
+
+<p>
+  <strong>Trustee:</strong>
+  <%= @charity_trustee.trustee %>
+</p>
+
+<%= link_to 'Edit', edit_charity_trustee_path(@charity_trustee) %> |
+<%= link_to 'Back', charity_trustees_path %>

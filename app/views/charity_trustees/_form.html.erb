@@ -1,0 +1,27 @@
+<%= form_with(model: charity_trustee, local: true) do |form| %>
+  <% if charity_trustee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(charity_trustee.errors.count, "error") %> prohibited this charity_trustee from being saved:</h2>
+
+      <ul>
+      <% charity_trustee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regno %>
+    <%= form.text_field :regno, id: :charity_trustee_regno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trustee %>
+    <%= form.text_field :trustee, id: :charity_trustee_trustee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

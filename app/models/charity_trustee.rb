@@ -1,0 +1,2 @@
+class CharityTrustee < ApplicationRecord
+end
