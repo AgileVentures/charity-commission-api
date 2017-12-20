@@ -4,7 +4,7 @@ class CharityAoosController < ApplicationController
   # GET /charity_aoos
   # GET /charity_aoos.json
   def index
-    @charity_aoos = CharityAoo.first(50)
+    @charity_aoos = CharityAoo.search(params, 50)
   end
 
   # GET /charity_aoos/1

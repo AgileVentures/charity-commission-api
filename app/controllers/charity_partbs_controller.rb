@@ -4,7 +4,7 @@ class CharityPartbsController < ApplicationController
   # GET /charity_partbs
   # GET /charity_partbs.json
   def index
-    @charity_partbs = CharityPartb.first(50)
+    @charity_partbs = CharityPartb.search(params, 50)
   end
 
   # GET /charity_partbs/1

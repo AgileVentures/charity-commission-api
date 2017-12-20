@@ -4,7 +4,7 @@ class AooRefsController < ApplicationController
   # GET /aoo_refs
   # GET /aoo_refs.json
   def index
-    @aoo_refs = AooRef.first(50)
+    @aoo_refs = AooRef.search(params, 50)
   end
 
   # GET /aoo_refs/1

@@ -4,7 +4,7 @@ class AcctSubmitsController < ApplicationController
   # GET /acct_submits
   # GET /acct_submits.json
   def index
-    @acct_submits = AcctSubmit.first(50)
+    @acct_submits = AcctSubmit.search(params, 50)
   end
 
   # GET /acct_submits/1

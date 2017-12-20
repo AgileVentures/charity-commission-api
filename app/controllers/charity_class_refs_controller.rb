@@ -4,7 +4,7 @@ class CharityClassRefsController < ApplicationController
   # GET /charity_class_refs
   # GET /charity_class_refs.json
   def index
-    @charity_class_refs = CharityClassRef.first(50)
+    @charity_class_refs = CharityClassRef.search(params, 50)
   end
 
   # GET /charity_class_refs/1

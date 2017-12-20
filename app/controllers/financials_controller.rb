@@ -4,7 +4,7 @@ class FinancialsController < ApplicationController
   # GET /financials
   # GET /financials.json
   def index
-    @financials = Financial.first(50)
+    @financials = Financial.search(params, 50)
   end
 
   # GET /financials/1

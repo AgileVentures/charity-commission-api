@@ -4,7 +4,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations
   # GET /registrations.json
   def index
-    @registrations = Registration.first(50)
+    @registrations = Registration.search(params, 50)
   end
 
   # GET /registrations/1

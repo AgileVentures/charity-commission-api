@@ -4,7 +4,7 @@ class ArSubmitsController < ApplicationController
   # GET /ar_submits
   # GET /ar_submits.json
   def index
-    @ar_submits = ArSubmit.first(50)
+    @ar_submits = ArSubmit.search(params, 50)
   end
 
   # GET /ar_submits/1
