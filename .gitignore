@@ -18,4 +18,7 @@
 
 .byebug_history
 
+charity_api.sql
+.idea/**/*
+
 
