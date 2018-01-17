@@ -18,6 +18,9 @@
 
 .byebug_history
 
-/.idea
-database.yml
+
+charity_api.sql
+.idea/**/*
+config/database.yml
+
 
