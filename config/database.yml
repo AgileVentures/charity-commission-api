@@ -50,4 +50,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  database: charity_api
+  username: charity-commission-api
+  password: <%= ENV['CHARITY-COMMISSION-API_DATABASE_PASSWORD'] %>
