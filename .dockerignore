@@ -1,0 +1,22 @@
+.git
+.gitignore
+README.md
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+/node_modules
+/yarn-error.log
+
+.byebug_history
+
+
+charity_api.sql
+.idea/**/*
+config/database.yml
