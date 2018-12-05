@@ -1,7 +1,7 @@
 .git
 .gitignore
 README.md
-
+test
 # Ignore bundler config.
 /.bundle
 
@@ -16,7 +16,7 @@ README.md
 
 .byebug_history
 
-
+.ruby-version
 charity_api.sql
 .idea/**/*
 config/database.yml
