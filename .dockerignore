@@ -19,4 +19,3 @@ test
 .ruby-version
 charity_api.sql
 .idea/**/*
-config/database.yml
