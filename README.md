@@ -1,24 +1,9 @@
-# README
+Charity Commission API
+======================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+System Architecture
+-------------------
 
-Things you may want to cover:
+![](https://dl.dropbox.com/s/whsdhrmrynvdt4f/Screenshot%202019-01-22%2009.39.58.png?dl=0)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://docs.google.com/drawings/d/1wKyl0sJRd6paiJ2WIocXEwZpT0xaHfQj-jx_NNEkBMQ/edit)
