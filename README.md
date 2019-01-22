@@ -11,6 +11,7 @@ https://docs.google.com/drawings/d/1wKyl0sJRd6paiJ2WIocXEwZpT0xaHfQj-jx_NNEkBMQ/
 Components
 ---------------
 
+* [Charity Commission Data Dumps](http://data.charitycommission.gov.uk/)
 * Charity Commission API Rails app - this repo
 * [Charity Commission Extract](https://github.com/AgileVentures/charity-commission-extract)
 * [LocalSupport](https://github.com/AgileVentures/LocalSupport)
