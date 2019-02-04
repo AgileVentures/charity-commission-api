@@ -23,4 +23,4 @@ charity_api.sql
 .idea/**/*
 config/database.yml
 
-
+.env
