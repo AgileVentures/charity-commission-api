@@ -8,6 +8,7 @@
       <th>Regno</th>
       <th>Subno</th>
       <th>Name</th>
+      <th>Desc</th>
       <th>Orgtype</th>
       <th>Gd</th>
       <th>Aob</th>
@@ -33,27 +34,28 @@
   <tbody>
     <% @charities.each do |charity| %>
       <tr>
-        <td><%= charity.regno %></td>
-        <td><%= charity.subno %></td>
-        <td><%= charity.name %></td>
-        <td><%= charity.orgtype %></td>
-        <td><%= charity.gd %></td>
-        <td><%= charity.aob %></td>
-        <td><%= charity.aob_defined %></td>
-        <td><%= charity.nhs %></td>
-        <td><%= charity.ha_no %></td>
-        <td><%= charity.corr %></td>
-        <td><%= charity.add1 %></td>
-        <td><%= charity.add2 %></td>
-        <td><%= charity.add3 %></td>
-        <td><%= charity.add4 %></td>
-        <td><%= charity.add5 %></td>
-        <td><%= charity.postcode %></td>
-        <td><%= charity.phone %></td>
-        <td><%= charity.fax %></td>
-        <td><%= charity.lon %></td>
-        <td><%= charity.lat %></td>
-        <td><%= charity.updated_at %></td>
+        <td><%= charity[:regno] %></td>
+        <td><%= charity[:subno] %></td>
+        <td><%= charity[:name] %></td>
+        <td><%= charity[:desc] %></td>
+        <td><%= charity[:orgtype] %></td>
+        <td><%= charity[:gd] %></td>
+        <td><%= charity[:aob] %></td>
+        <td><%= charity[:aob_defined] %></td>
+        <td><%= charity[:nhs] %></td>
+        <td><%= charity[:ha_no] %></td>
+        <td><%= charity[:corr] %></td>
+        <td><%= charity[:add1] %></td>
+        <td><%= charity[:add2] %></td>
+        <td><%= charity[:add3] %></td>
+        <td><%= charity[:add4] %></td>
+        <td><%= charity[:add5] %></td>
+        <td><%= charity[:postcode] %></td>
+        <td><%= charity[:phone] %></td>
+        <td><%= charity[:fax] %></td>
+        <td><%= charity[:lon] %></td>
+        <td><%= charity[:lat] %></td>
+        <td><%= charity[:updated_at] %></td>
         <td><%= link_to 'Show', charity %></td>
         <td><%= link_to 'Edit', edit_charity_path(charity) %></td>
         <td><%= link_to 'Destroy', charity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
