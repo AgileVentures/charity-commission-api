@@ -1,0 +1,1 @@
+json.array! @charities, partial: 'charity', as: :charity_overview

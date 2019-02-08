@@ -8,6 +8,10 @@ System Architecture
 
 https://docs.google.com/drawings/d/1wKyl0sJRd6paiJ2WIocXEwZpT0xaHfQj-jx_NNEkBMQ/edit)
 
+Example of JSON output from the charity commission api:
+
+![](https://dl.dropbox.com/s/7bfhzuygktx70hw/Screenshot%202019-02-04%2016.31.57.png?dl=0)
+
 Components
 ---------------
 

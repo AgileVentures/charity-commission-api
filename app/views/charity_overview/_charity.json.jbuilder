@@ -1,0 +1,1 @@
+json.extract! charity_overview, :id, :regno, :subno, :name, :desc, :orgtype, :gd, :aob, :aob_defined, :nhs, :ha_no, :corr, :add1, :add2, :add3, :add4, :add5, :postcode, :phone, :fax, :lon, :lat, :created_at, :updated_at
