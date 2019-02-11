@@ -21,7 +21,7 @@ class ExportOrganisations
   
   def find_or_create_organisations_and_update
 #    charities = Charity.search(@params, @number_of_records)
-    charities = Charity.where(subno: 0).find_each do |charity|
+    Charity.where(subno: 0).find_each do |charity|
       puts charity.regno
       desc = CharityObject.where(regno: charity.regno, subno: 0).order(:seqno).map { |charity_object| charity_object.object.sub(/\.$/, '').sub(/0001$/, '') }.join('') << '.'
 
