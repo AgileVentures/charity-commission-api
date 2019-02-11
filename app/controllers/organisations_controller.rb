@@ -1,7 +1,7 @@
 class OrganisationsController < ApplicationController
 
   def index
-    @organisations = Organisation.all
+    @organisations = Organisation.search(params, 50)
 
     render json: @organisations
   end

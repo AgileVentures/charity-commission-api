@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190209205100) do
+ActiveRecord::Schema.define(version: 20190211014146) do
 
   create_table "acct_submits", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 20190209205100) do
     t.text "object", collation: "latin1_swedish_ci"
     t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.index ["regno"], name: "index_charity_objects_on_regno"
   end
 
   create_table "charity_partbs", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
