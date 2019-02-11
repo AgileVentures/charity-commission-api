@@ -24,7 +24,7 @@ class ExportOrganisations
     charities = Charity.where(subno: 0)
     charities.each do |charity|
       puts charity.regno
-      desc = CharityObject.where(regno: charity.regno, subno: 0).map {|charity_object| charity_object.object.sub(/\.$/, '').sub(/0001$/, '')}.join('') << '.'
+      desc = CharityObject.where(regno: charity.regno, subno: 0).map { |charity_object| charity_object.object.sub(/\.$/, '').sub(/0001$/, '') }.join('') << '.'
 
       organisation = Organisation.find_or_create_by!(name: charity.name.titleize)
 
