@@ -30,6 +30,7 @@ class ExportOrganisations
       # organisation = Organisation.find_or_create_by!(name: charity.name.titleize)
       organisation = Organisation.find_or_create_by!(regno: charity.regno)
 
+      organisation.name = charity.name if charity.name
       organisation.address = charity.add1 if charity.add1
       organisation.postcode = charity.postcode if charity.postcode
       organisation.description = desc if desc
