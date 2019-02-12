@@ -21,8 +21,8 @@ class ExportOrganisations
   
   def find_or_create_organisations_and_update
 #    charities = Charity.search(@params, @number_of_records)
-    Charity.where(subno: 0).find_each do |charity|
-      puts charity.regno
+    Charity.where(subno: 0).find_each.with_index do |charity, index|
+      puts "Charity #{index}, regno: #{charity.regno}"
       desc = CharityObject.where(regno: charity.regno, subno: 0).order(:seqno).map { |charity_object| charity_object.object.sub(/\.$/, '').sub(/0001$/, '') }.join('') << '.'
 
       organisation = Organisation.find_or_create_by!(name: charity.name.titleize)
