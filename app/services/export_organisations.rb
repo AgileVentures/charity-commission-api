@@ -20,12 +20,13 @@ class ExportOrganisations
   end
   
   def find_or_create_organisations_and_update
-#    charities = Charity.search(@params, @number_of_records)
+#   charities = Charity.search(@params, @number_of_records)
     Charity.where(subno: 0).find_each.with_index do |charity, index|
       puts "Charity #{index}, regno: #{charity.regno}"
       desc = CharityObject.where(regno: charity.regno, subno: 0).order(:seqno).map { |charity_object| charity_object.object.sub(/\.$/, '').sub(/0001$/, '') }.join('') << '.'
 
-      organisation = Organisation.find_or_create_by!(name: charity.name.titleize)
+#     organisation = Organisation.find_or_create_by!(name: charity.name.titleize)
+      organisation = Organisation.find_or_create_by!(regno: charity.regno)
 
       organisation.address = charity.add1 if charity.add1
       organisation.postcode = charity.postcode if charity.postcode
