@@ -24,3 +24,4 @@ charity_api.sql
 config/database.yml
 
 .env
+.swp
