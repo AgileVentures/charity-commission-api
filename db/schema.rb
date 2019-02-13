@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20190212072741) do
 
   create_table "acct_submits", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.text "object", collation: "latin1_swedish_ci"
     t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.index ["regno"], name: "index_charity_objects_on_regno"
   end
 
   create_table "charity_partbs", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -195,6 +196,32 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "web", collation: "latin1_swedish_ci"
     t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+  end
+
+  create_table "organisations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", default: "", null: false
+    t.string "address", default: "", null: false
+    t.string "postcode", default: "", null: false
+    t.string "email", default: "", null: false
+    t.text "description"
+    t.string "website", default: "", null: false
+    t.string "telephone", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "latitude", limit: 24
+    t.float "longitude", limit: 24
+    t.boolean "gmaps"
+    t.text "donation_info"
+    t.boolean "publish_address", default: false
+    t.boolean "publish_phone", default: false
+    t.boolean "publish_email", default: true
+    t.datetime "deleted_at"
+    t.string "type", default: "Organisation"
+    t.boolean "non_profit"
+    t.string "slug"
+    t.datetime "imported_at"
+    t.string "regno"
+    t.index ["regno"], name: "index_organisations_on_regno"
   end
 
   create_table "registrations", id: :integer, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
