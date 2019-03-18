@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "regno", limit: 14, default: "0", null: false, collation: "latin1_swedish_ci"
     t.integer "subno", default: 0, null: false
     t.string "seqno", limit: 4, default: "", null: false, collation: "latin1_swedish_ci"
-    t.string "object", collation: "latin1_swedish_ci"
+    t.text "object", collation: "latin1_swedish_ci"
     t.timestamp "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.timestamp "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end

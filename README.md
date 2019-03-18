@@ -1,24 +1,22 @@
-# README
+Charity Commission API
+======================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+System Architecture
+-------------------
 
-Things you may want to cover:
+![](https://dl.dropbox.com/s/whsdhrmrynvdt4f/Screenshot%202019-01-22%2009.39.58.png?dl=0)
 
-* Ruby version
+https://docs.google.com/drawings/d/1wKyl0sJRd6paiJ2WIocXEwZpT0xaHfQj-jx_NNEkBMQ/edit)
 
-* System dependencies
+Example of JSON output from the charity commission api:
 
-* Configuration
+![](https://dl.dropbox.com/s/7bfhzuygktx70hw/Screenshot%202019-02-04%2016.31.57.png?dl=0)
 
-* Database creation
+Components
+---------------
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Charity Commission Data Dumps](http://data.charitycommission.gov.uk/)
+* Charity Commission API Rails app - this repo
+* [Charity Commission Extract](https://github.com/AgileVentures/charity-commission-extract)
+* [LocalSupport](https://github.com/AgileVentures/LocalSupport)
+  - [import service](https://github.com/AgileVentures/LocalSupport/blob/develop/app/services/import_organisations.rb)
