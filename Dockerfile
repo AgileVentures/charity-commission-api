@@ -6,5 +6,3 @@ WORKDIR /charity-commission-api
 COPY Gemfile Gemfile.lock /charity-commission-api/
 RUN bundle install
 COPY . /charity-commission-api
-
-EXPOSE 80
